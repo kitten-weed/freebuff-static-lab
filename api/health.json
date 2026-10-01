@@ -1,0 +1,1 @@
+{"service":"freebuff-static-lab","status":"ok","sha":"local","note":"Replace sha at deploy time via pages.yml (GITHUB_SHA short). Serves as the Freebuff/API probe."}

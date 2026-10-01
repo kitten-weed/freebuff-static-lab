@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>freebuff-static-lab — Pages test rig</title>
+<meta name="description" content="Minimal static server lab for GitHub Pages + Freebuff hooks." />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main class="wrap">
+  <p class="kicker">freebuff-static-lab · <span id="host"></span></p>
+  <h1>Static server test rig</h1>
+  <p class="lede">If you can read this on Pages <em>and</em> on <code>localhost:8080</code>, the hook-in works. Freebuff edits files here, pushes, Pages redeploys.</p>
+
+  <section class="card">
+    <h2>Live checks</h2>
+    <ul class="checks">
+      <li>DOM booted: <strong id="dom-check">…</strong></li>
+      <li><code>/api/health.json</code>: <strong id="api-check">…</strong></li>
+      <li>Deployed SHA: <code id="sha">local</code></li>
+    </ul>
+    <div class="row">
+      <button id="ping" type="button">Ping API</button>
+      <button id="break-it" type="button" class="ghost">Freebuff test button</button>
+    </div>
+    <p id="ping-out" class="mono" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>How Freebuff hooks in</h2>
+    <ol>
+      <li><code>cd freebuff-static-lab &amp;&amp; freebuff</code> — reads <code>knowledge.md</code> + <code>AGENTS.md</code></li>
+      <li>Edit → <code>npm test</code> (smoke: serves <code>./</code>, asserts 200 + JSON)</li>
+      <li>Push to <code>main</code> → Actions deploys to Pages</li>
+      <li>Freebuff Cloud: connect the GitHub repo, same files, hosted preview</li>
+    </ol>
+  </section>
+
+  <footer>Student Pack rig · Pages + Codespaces + Freebuff · <a href="./404.html">404 probe</a></footer>
+</main>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

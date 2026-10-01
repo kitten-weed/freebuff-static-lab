@@ -1,0 +1,1 @@
+{"name":"freebuff-static-lab","version":"0.1.0","private":true,"description":"GitHub Pages + Freebuff static test rig (Student Pack).","type":"commonjs","scripts":{"start":"node serve.cjs","test":"node smoke.mjs"},"engines":{"node":">=18"}}
